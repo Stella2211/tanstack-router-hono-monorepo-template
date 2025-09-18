@@ -1,0 +1,21 @@
+{
+  "name": "template",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"cd frontend && bun run dev\" \"cd backend && bun run dev\"",
+    "check": "tsc --noEmit",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/bun": "latest",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.7.2"
+  }
+}
